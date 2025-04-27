@@ -1,12 +1,50 @@
-# React + Vite
+# Personal Finance Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)
+![Tailwind CSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white)
 
-Currently, two official plugins are available:
+A modern personal finance management dashboard built with:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡ **Vite** for ultra-fast development
+- 🎨 **Tailwind CSS** + **Shadcn/ui** for beautiful, accessible components
+- 🗺️ **React Router** for navigation
+- 🧩 **Zustand** for state management
 
-## Expanding the ESLint configuration
+## Why JavaScript?
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+While TypeScript was the client's preference, this project uses **JavaScript** because:
+1. It's the language I'm currently most proficient in
+2. Allows faster initial development for Phase 1
+3. Can be migrated to TypeScript incrementally
+
+## Getting Started
+
+### Installation
+```bash
+npm install
+
+Key Features
+✅ Modern Vite + React setup
+✅ Tailwind CSS with proper configuration
+✅ Shadcn/ui component library
+✅ Clean routing structure
+✅ Path aliases (@/ for src/)
+
+src/
+├── components/    # Reusable components
+├── lib/           # Utilities (cn() for Shadcn)
+├── pages/         # Route pages
+├── routes/        # Router configuration
+├── App.jsx        # Main app
+└── main.jsx       # Entry point
+
+Dependencies
+react-router-dom - Routing
+
+zustand - State management
+
+axios + swr - API handling
+
+tailwindcss + shadcn/ui - Styling
+
