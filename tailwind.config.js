@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 // import tailwindVite from '@tailwindcss/vite';
+
+import animate from 'tailwindcss-animate'
 export default {
     content: [
       "./index.html",
       "./src/**/*.{js,jsx}",
     ],
-    plugins: [],
+    plugins: [animate],
     theme: {
       extend: {
         colors: {

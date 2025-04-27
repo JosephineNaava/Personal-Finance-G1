@@ -9,17 +9,17 @@ export default function Layout() {
           <div className="flex justify-between h-16">
             <div className="flex space-x-4 p-4 ">
               <Link to="/dashboard">
-                <Button variant="ghost" className="text-gray-400 ">
+                <Button variant="ghost" className="text-gray-500 ">
                   Dashboard
                 </Button>
               </Link>
               <Link to="/transactions">
-                <Button variant="ghost" className="text-gray-400 ">
+                <Button variant="ghost" className="text-gray-500 ">
                   Transactions
                 </Button>
               </Link>
               <Link to="/settings">
-                <Button variant="ghost" className="text-gray-400 ">
+                <Button variant="ghost" className="text-gray-500 ">
                   Settings
                 </Button>
               </Link>
