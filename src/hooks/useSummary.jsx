@@ -6,7 +6,7 @@ const useSummary = () => {
   const { setSummary, setIsLoading, setError } = useStore();
   
   const { data, error, isLoading } = useSWR(
-    'summary', // Single cache key
+    'summary', 
     fetchSummary,
     {
       onSuccess: (data) => {

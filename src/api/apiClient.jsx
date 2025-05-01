@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { mockTransactions, mockSummary } from '../data/mockData';
 
-// Create configured Axios instance
+
 const apiClient = axios.create({
-  baseURL: 'https://api.financevis.com/v1', // Placeholder for real API
+  baseURL: 'https://api.financevis.com/v1', 
   headers: {
     'Content-Type': 'application/json'
   }
@@ -13,7 +13,7 @@ const apiClient = axios.create({
 apiClient.interceptors.response.use(
   response => response,
   error => {
-    // For now, return mock data for all requests
+    
     const isTransactionsRequest = error.config.url.includes('transactions');
     return Promise.resolve({ 
       data: isTransactionsRequest ? mockTransactions : mockSummary 
@@ -23,10 +23,3 @@ apiClient.interceptors.response.use(
 
 export default apiClient;
 
-/*
-API Client Features:
-1. Base configuration in one place
-2. Request/response interceptors
-3. Currently mocks all responses
-4. Easy to switch to real API later
-*/

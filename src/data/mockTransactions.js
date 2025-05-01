@@ -1,4 +1,4 @@
-// Array of transaction objects 
+
 export const mockTransactions = [
     {
       id: '1',
@@ -10,7 +10,7 @@ export const mockTransactions = [
     },
     {
       id: '2',
-      date: '2025-03-01',
+      date: '2025-04-01',
       description: 'Salary Deposit',
       category: 'Income',
       amount: 2500.00,
@@ -34,7 +34,7 @@ export const mockTransactions = [
       },
       {
         id: '5',
-        date: '2025-03-20',
+        date: '2025-04-20',
         description: 'Massage',
         category: 'selfcare',
         amount: 75.99,
