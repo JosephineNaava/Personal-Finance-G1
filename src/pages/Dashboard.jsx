@@ -10,7 +10,7 @@ const Dashboard = () => {
 
    return (
       <div className="space-y-4">
-        <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+        {/* <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1> */}
         <p className="text-gray-600">
           Welcome to your personal finance dashboard. Here you'll find an overview of your financial health.
         </p>
@@ -33,14 +33,13 @@ const Dashboard = () => {
         </div>
 
         {/* Recent Transactions */}
-      <div className="bg-white p-4 rounded shadow">
+      <div className="bg-white p-10 rounded shadow">
         <h2 className="text-lg font-semibold mb-3">Recent Transactions</h2>
         <ul className="space-y-2">
           {summary?.recentTransactions?.map(tx => (
-            <li key={tx.id} className="flex justify-between border-b pb-2">
+            <li key={tx.id} className="flex justify-between  pb-2">
               <div>
-                <p>{tx.description}</p>
-                <p className="text-sm text-gray-500">{tx.date}</p>
+                <p className="text-sm text-gray-700"> {tx.date} {tx.description}</p>
               </div>
               <p className={tx.type === 'income' ? 'text-green-600' : 'text-red-600'}>
                 {tx.type === 'income' ? '+' : '-'}${tx.amount.toFixed(2)}
