@@ -1,11 +1,11 @@
-import useTransactions from "@/hooks/useTransactions";
+// import useTransactions from "@/hooks/useTransactions";
 
 
 export function TransactionList({ transactions }) {
-    const { transactions, isLoading, error } = useTransactions();
+    // const { transactions, isLoading, error } = useTransactions();
     
-    if (isLoading) return <div className="p-4">Loading Transaction...</div>
-    if (error) return <div className="p-4 text-red-500">Error...</div>
+    // if (isLoading) return <div className="p-4">Loading Transaction...</div>
+    // if (error) return <div className="p-4 text-red-500">Error...</div>
 
 
     if (transactions.length === 0) {
