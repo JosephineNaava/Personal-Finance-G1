@@ -2,11 +2,12 @@ import { Link, Outlet } from 'react-router-dom'
 import { Button } from './ui/button'
 import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar'
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from './ui/dropdown-menu'
+import { Sidebar } from './Sidebar'
 
 export default function Layout() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
-      {/* Combined Header with Navigation */}
+     
       <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -39,7 +40,7 @@ export default function Layout() {
                   <Button variant="ghost" className="gap-2 hover:bg-gray-100">
                     <Avatar className="h-8 w-8">
                       <AvatarImage src="/user.png" />
-                      <AvatarFallback>US</AvatarFallback>
+                      <AvatarFallback>O</AvatarFallback>
                     </Avatar>
                     <span className="text-gray-600">User</span>
                   </Button>
@@ -49,7 +50,7 @@ export default function Layout() {
                     Profile
                   </DropdownMenuItem>
                   <DropdownMenuItem className="cursor-pointer hover:bg-gray-50">
-                    Settings
+                    Account Settings
                   </DropdownMenuItem>
                   <DropdownMenuItem className="cursor-pointer hover:bg-gray-50 text-red-600 focus:text-red-600">
                     Logout
@@ -60,13 +61,30 @@ export default function Layout() {
           </div>
         </div>
       </header>
+
+{/* Main Content */}
+
+      <div className="flex flex-1">
+        {/* Sidebar - shown on all screens */}
+        <aside className="w-64 bg-white border-r border-gray-200 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto">
+          <Sidebar />
+        </aside>
+        
+        
+        <main className="flex-1 overflow-y-auto">
+          <div className="max-w-7xl mx-auto p-6">
+            <Outlet />
+          </div>
+        </main>
+
+            {/* <main className="flex-1 max-w-7xl mx-auto w-full py-6 sm:px-6 lg:px-8">
+            <div className="px-4 py-6 sm:px-0 rounded-lg  border-gray-200">
+              <Outlet />
+            </div>
+            </main> */}
+      </div>
       
-      {/* Main Content */}
-      <main className="flex-1 max-w-7xl mx-auto w-full py-6 sm:px-6 lg:px-8">
-        <div className="px-4 py-6 sm:px-0 bg-white rounded-lg  border-gray-200">
-          <Outlet />
-        </div>
-      </main>
+      
       
       {/* Optional Footer */}
       <footer className="py-4 bg-white border-t border-gray-200">
