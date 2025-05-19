@@ -5,8 +5,24 @@ import useTransactions from "@/hooks/useTransactions"
 export default function Transactions() {
   const { transactions, isLoading, error } = useTransactions();
     
-    if (isLoading) return <div className="p-4">Loading Transaction...</div>
-    if (error) return <div className="p-4 text-red-500">Error...</div>
+  if (isLoading) {
+    return (
+      <div className="space-y-4">
+        <Skeleton className="h-10 w-[200px]" />
+        {[...Array(5)].map((_, i) => (
+          <Skeleton key={i} className="h-16 w-full" />
+        ))}
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="p-4 bg-red-50 text-red-600 rounded-lg">
+        Failed to load transactions. Refresh or try later.
+      </div>
+    );
+  }
 
 
     return (

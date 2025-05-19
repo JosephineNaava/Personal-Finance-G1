@@ -4,10 +4,25 @@ import useSummary from "@/hooks/useSummary";
 const Dashboard = () => {
   const {summary, isLoading, error}= useSummary();
 
-  if (isLoading) return 
+  if (isLoading) {
+    return (
+      <div className="space-y-6 p-4">
+        <Skeleton className="h-10 w-[200px]" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Skeleton className="h-32" />
+          <Skeleton className="h-32" />
+          <Skeleton className="h-32" />
+        </div>
+      </div>
+    )
+  }
         <div className="p-4">Loading dashboard...</div>
-  if (error) return 
-        <div className="p-4 text-red-500">Error...</div>
+  if (error) {
+    return( 
+        <div className="p-4 text-red-500 bg-red-50 rounded-b-lg">
+          Error... Failed to load Dashboard. Refresh.
+        </div>
+    )}
 
    return (
       <div className="space-y-4">
