@@ -1,5 +1,5 @@
 import useTransactions from "@/hooks/useTransactions"
-
+import { Skeleton } from "@/components/ui/skeleton";
 
 
 export default function Transactions() {
